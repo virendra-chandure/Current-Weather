@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>Current Weather</title>
+<script src="js/angular.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/weather-main.js"></script>
+</head>
+
+<body ng-app="myApp">
+	<div class="container" ng-controller="myCtrl">
+		<h1>Current Weather</h1>
+		<p>
+			Select City: <select ng-model="selectedCity" ng-options="x.city for x in locations" ng-change="updateData()"></select>
+		</p>
+		<table border=1 width="360" >
+			<tbody ng-model="summary">
+				<tr>
+					<td width="180">City</td>
+					<td width="180">{{summary.city}}</td>
+				</tr>
+				<tr>
+					<td>Updated time</td>
+					<td>{{summary.time}}</td>
+				</tr>
+				<tr>
+					<td>Weather</td>
+					<td>{{summary.weather}}</td>
+				</tr>
+				<tr>
+					<td>Temperature</td>
+					<td>{{summary.temperature}}</td>
+				</tr>
+				<tr>
+					<td>Wind</td>
+					<td>{{summary.wind}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<div ng-hide={{error}}>{{error}}</div>
+	</div>
+
+</body>
+</html>
