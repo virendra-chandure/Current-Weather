@@ -9,7 +9,7 @@
     {
       "sourceType": "com.example.weather.util.WeatherAppProperties",
       "name": "app.weather.api",
-      "sourceMethod": "getApi()",
+      "sourceMethod": "public com.example.weather.util.WeatherAppProperties.Api getApi() ",
       "type": "com.example.weather.util.WeatherAppProperties$Api"
     }
   ],
@@ -22,12 +22,6 @@
     {
       "sourceType": "com.example.weather.util.WeatherAppProperties$Api",
       "name": "app.weather.api.url",
-      "description": "A description for 'app.weather.api.url'",
-      "type": "java.lang.String"
-    },
-    {
-      "name": "app.weather.apikey",
-      "description": "A description for 'app.weather.apikey'",
       "type": "java.lang.String"
     },
     {
